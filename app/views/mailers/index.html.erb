@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Mailers" %>
+
+<h1>Mailers</h1>
+
+<div id="mailers">
+  <% @mailers.each do |mailer| %>
+    <%= render mailer %>
+    <p>
+      <%= link_to "Show this mailer", mailer %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New mailer", new_mailer_path %>
