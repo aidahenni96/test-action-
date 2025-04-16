@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root "static_pages#index"
+  root"pages#home"
+  get "second_page", to: "static_pages#index"
   get "static_pages/secret"
   devise_for :users
   resources :mailers
